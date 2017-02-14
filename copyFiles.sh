@@ -1,13 +1,13 @@
 #!/bin/bash
 
-recordtypes=( $1 )
+tofolder=( $2 )
 filestocopy=( .cmp Controller.js Helper.js .svg )
 
 dir="/Users/sbelvadi/Documents/workspace/sbelvadi-wealth1/wealth1/"
 auradir="src/aura/"
-loanAccountFolder="loanAccount"
+fromfolder=$1
 
-for foldername in "${recordtypes[@]}"; do
+for foldername in "${tofolder[@]}"; do
     if [ -z "$foldername" ]; then
         continue
     fi
@@ -16,7 +16,7 @@ for foldername in "${recordtypes[@]}"; do
     mkdir $folder
 
     for filename in "${filestocopy[@]}"; do
-        cp -R $dir$auradir$loanAccountFolder/$loanAccountFolder$filename $folder/$foldername$filename
+        cp -R $dir$auradir$fromfolder/$fromfolder$filename $folder/$foldername$filename
         cd $dir
     done
 done
