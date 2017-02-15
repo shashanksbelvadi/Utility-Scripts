@@ -2,7 +2,7 @@
 
 fromfolder=$1
 tofolder=( $2 )
-filestocopy=( .cmp Controller.js Helper.js .svg )
+filestocopy=( .cmp .cmp-meta.xml Controller.js Helper.js .svg )
 
 dir="/Users/sbelvadi/Documents/workspace/sbelvadi-wealth1/wealth1/"
 auradir="src/aura/"
